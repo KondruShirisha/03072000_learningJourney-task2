@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/AddUsers_title"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/heading_addusers"
+        android:text="@string/add_users"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddUsers_title"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name"
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_goals"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_goals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/do_you_have_educational_goals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintBottom_toTopOf="@id/et_goalsStatus"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_goalsStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals"
+        app:layout_constraintBottom_toTopOf="@id/tv_dob"
+
+        />
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_goals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/et_goalsStatus"
+        app:layout_constraintTop_toBottomOf="@id/tv_goals"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_goals"
+        app:layout_constraintBottom_toTopOf="@id/et_dob"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob"
+        app:layout_constraintBottom_toTopOf="@id/tv_TimeDate"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/dob_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dob_img"
+        app:layout_constraintEnd_toEndOf="@id/et_dob"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob"
+        android:layout_marginEnd="8dp"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_TimeDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/date_and_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_dob"
+        app:layout_constraintBottom_toTopOf="@id/et_TimeDate"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_TimeDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_TimeDate"
+        app:layout_constraintBottom_toTopOf="@id/tv_rating"
+        />
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/datetime_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/timedate_calender"
+        app:layout_constraintEnd_toEndOf="@id/et_TimeDate"
+        app:layout_constraintTop_toBottomOf="@id/tv_TimeDate"
+        android:layout_marginEnd="8dp"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/how_do_you_rate_your_self"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_TimeDate"
+        app:layout_constraintBottom_toTopOf="@id/et_rating"/>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/et_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rating"
+        app:layout_constraintBottom_toTopOf="@id/submit_button"
+        android:backgroundTint="#FFD401"
+        android:max="4"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit_button"
+        android:layout_width="378dp"
+        android:layout_height="0dp"
+        android:background="@drawable/submit_shape"
+        android:backgroundTint="#19BED4"
+        android:text="save"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/et_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="17dp"
+        android:layout_marginTop="40dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application_22apriltask2</string>
+    <string name="users">Users</string>
+    <string name="adduser_button">adduser_button</string>
+    <string name="how_do_you_rate_your_self">How do you rate your self</string>
+    <string name="add_users">Add Users</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="do_you_have_educational_goals">Do you have educational goals?</string>
+    <string name="dob">DOB</string>
+    <string name="date_and_time">Date and Time</string>
+</resources>
