@@ -5,12 +5,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.RatingBar
 import android.widget.TextView
+import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 class UserAdapter(private var userList: List<User>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -47,6 +52,23 @@ class UserAdapter(private var userList: List<User>) :
         private val dobTextView: TextView? = itemView.findViewById(R.id.dob_text_view)
         private val dateTimeTextView: TextView? = itemView.findViewById(R.id.date_time_text_view)
         private val ratingBar: RatingBar? = itemView.findViewById(R.id.rating_bar)
+        private val imageCancel: Button? = itemView.findViewById(R.id.image_cancel)
+        private val editButton : TextView?=itemView.findViewById(R.id.edit_remove_user)
+
+        init {
+           editButton?.setOnClickListener {
+                imageCancel?.visibility = View.VISIBLE
+            }
+            imageCancel?.setOnClickListener {
+                val position = adapterPosition
+                val user = userList[position]
+                val lifecycleOwner = (itemView.context as? LifecycleOwner)
+                lifecycleOwner?.lifecycleScope?.launch {
+                    deleteUser(user, position, itemView.context)
+                }
+            }
+
+        }
 
         fun bind(user: User) {
             nameTextView?.text = user.name
@@ -56,6 +78,8 @@ class UserAdapter(private var userList: List<User>) :
             dateTimeTextView?.text = user.timeDate
             ratingBar?.rating = user.rating
             Log.d("UserAdapter", "Binding user----: $user")
+
+
         }
     }
 }
