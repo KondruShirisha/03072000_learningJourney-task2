@@ -1,6 +1,5 @@
 package com.example.myapplication_22apriltask2
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao

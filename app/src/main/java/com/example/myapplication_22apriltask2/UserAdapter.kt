@@ -1,4 +1,5 @@
 package com.example.myapplication_22apriltask2
+
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class UserAdapter(private var userList: List<User>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
-
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -38,8 +38,6 @@ class UserAdapter(private var userList: List<User>) :
         // delete user from database
         AppDatabase.getDatabase(context).userDao().deleteUser(user)
     }
-
-
 
 
     inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

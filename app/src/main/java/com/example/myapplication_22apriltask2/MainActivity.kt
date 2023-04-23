@@ -5,15 +5,9 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatButton
-import androidx.appcompat.widget.AppCompatEditText
-import androidx.appcompat.widget.AppCompatImageButton
-import androidx.appcompat.widget.AppCompatRatingBar
-import androidx.appcompat.widget.AppCompatTextView
-import androidx.appcompat.widget.SwitchCompat
+import androidx.appcompat.widget.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -30,8 +24,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var switchGoals: SwitchCompat
     private lateinit var etDob: AppCompatEditText
     private lateinit var dobImage: AppCompatImageButton
-    private lateinit var etTimeDate:AppCompatEditText
-    private lateinit var timeDateImage:AppCompatImageButton
+    private lateinit var etTimeDate: AppCompatEditText
+    private lateinit var timeDateImage: AppCompatImageButton
     private lateinit var ratingBar: AppCompatRatingBar
     private lateinit var btnSubmit: AppCompatButton
 
@@ -46,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         etDob = findViewById(R.id.et_dob)
         dobImage = findViewById(R.id.dob_image)
         etTimeDate = findViewById(R.id.et_TimeDate)
-        timeDateImage=findViewById(R.id.datetime_image)
+        timeDateImage = findViewById(R.id.datetime_image)
         ratingBar = findViewById(R.id.et_rating)
         btnSubmit = findViewById(R.id.submit_button)
 
@@ -96,7 +90,13 @@ class MainActivity : AppCompatActivity() {
                         this,
                         { _, selectedHour, selectedMinute ->
                             val selectedTime = Calendar.getInstance()
-                            selectedTime.set(selectedYear, selectedMonth, selectedDayOfMonth, selectedHour, selectedMinute)
+                            selectedTime.set(
+                                selectedYear,
+                                selectedMonth,
+                                selectedDayOfMonth,
+                                selectedHour,
+                                selectedMinute
+                            )
                             val sdf = SimpleDateFormat("dd-MM-yyyy | HH:mm", Locale.US)
                             etTimeDate.setText(sdf.format(selectedTime.time))
                         },
@@ -134,12 +134,13 @@ class MainActivity : AppCompatActivity() {
                         userDao.insert(user)
                         // Navigate to the UserListActivity
                         val intent = Intent(this@MainActivity, UserListActivity::class.java)
-                        intent.putExtra("USER-DATA",user)
+                        intent.putExtra("USER-DATA", user)
                         startActivity(intent)
                         finish()
                     } catch (e: Exception) {
                         runOnUiThread {
-                            Toast.makeText(this@MainActivity, "${e.message}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@MainActivity, "${e.message}", Toast.LENGTH_SHORT)
+                                .show()
                         }
                     }
                 }

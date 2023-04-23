@@ -29,7 +29,7 @@ data class User(
 
     @ColumnInfo(name = "rating")
     val rating: Float
-)  : Parcelable {
+) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,

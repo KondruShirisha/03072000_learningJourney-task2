@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
+    android:orientation="horizontal">
+
     <TextView
         android:id="@+id/image_cancel"
         android:layout_width="20dp"
@@ -30,7 +30,7 @@
         android:layout_marginStart="16dp"
         app:cardCornerRadius="8dp"
         app:cardUseCompatPadding="false"
-        app:cardElevation="4dp"    >
+        app:cardElevation="4dp">
 
         <TextView
             android:id="@+id/user_profile_image"
@@ -38,8 +38,7 @@
             android:layout_height="42dp"
             android:layout_marginStart="9dp"
             android:layout_marginTop="43dp"
-            android:background="@drawable/user_profilemale"
-            />
+            android:background="@drawable/user_profilemale" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/user_details_in_card"
@@ -48,8 +47,7 @@
             android:layout_marginStart="55dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.LinearLayoutCompat
 
@@ -59,8 +57,7 @@
                 android:orientation="horizontal"
                 android:paddingBottom="2dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -79,8 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="2dp"
-                    android:textSize="12dp"
-                    />
+                    android:textSize="12dp" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -126,8 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/email_label_text"
-                app:layout_constraintTop_toBottomOf="@id/email_label_text"
-                >
+                app:layout_constraintTop_toBottomOf="@id/email_label_text">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -159,8 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/goals_label"
-                app:layout_constraintTop_toBottomOf="@id/goals_label"
-                >
+                app:layout_constraintTop_toBottomOf="@id/goals_label">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -192,8 +186,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/dob_label_text_view"
-                app:layout_constraintTop_toBottomOf="@id/dob_label_text_view"
-                >
+                app:layout_constraintTop_toBottomOf="@id/dob_label_text_view">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -214,13 +207,10 @@
                     android:layout_height="wrap_content"
 
                     android:paddingBottom="2dp"
-                    android:textSize="12sp"
-                    />
+                    android:textSize="12sp" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -237,8 +227,7 @@
                 android:id="@+id/rating_bar"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

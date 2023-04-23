@@ -23,14 +23,14 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddUsers_title"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/AddUsers_title" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_name"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_name"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_email"
@@ -46,8 +46,7 @@
         android:layout_height="wrap_content"
         android:text="@string/email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_name"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_email"
@@ -56,8 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/tv_goals"
-        />
+        app:layout_constraintBottom_toTopOf="@id/tv_goals" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_goals"
@@ -66,7 +64,7 @@
         android:text="@string/do_you_have_educational_goals"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_email"
-        app:layout_constraintBottom_toTopOf="@id/et_goalsStatus"/>
+        app:layout_constraintBottom_toTopOf="@id/et_goalsStatus" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_goalsStatus"
@@ -77,13 +75,13 @@
         app:layout_constraintBottom_toTopOf="@id/tv_dob"
 
         />
+
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch_goals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@id/et_goalsStatus"
-        app:layout_constraintTop_toBottomOf="@id/tv_goals"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_goals" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_dob"
@@ -92,7 +90,7 @@
         android:text="@string/dob"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_goals"
-        app:layout_constraintBottom_toTopOf="@id/et_dob"/>
+        app:layout_constraintBottom_toTopOf="@id/et_dob" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_dob"
@@ -122,7 +120,7 @@
         android:text="@string/date_and_time"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_dob"
-        app:layout_constraintBottom_toTopOf="@id/et_TimeDate"/>
+        app:layout_constraintBottom_toTopOf="@id/et_TimeDate" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_TimeDate"
@@ -130,8 +128,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_TimeDate"
-        app:layout_constraintBottom_toTopOf="@id/tv_rating"
-        />
+        app:layout_constraintBottom_toTopOf="@id/tv_rating" />
+
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/datetime_image"
         android:layout_width="wrap_content"
@@ -150,7 +148,7 @@
         android:text="@string/how_do_you_rate_your_self"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_TimeDate"
-        app:layout_constraintBottom_toTopOf="@id/et_rating"/>
+        app:layout_constraintBottom_toTopOf="@id/et_rating" />
 
     <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/et_rating"
@@ -160,7 +158,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_rating"
         app:layout_constraintBottom_toTopOf="@id/submit_button"
         android:backgroundTint="#FFD401"
-        android:max="4"/>
+        android:max="4" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -175,9 +173,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteX="17dp"
-        android:layout_marginTop="40dp"
-        />
-
+        android:layout_marginTop="40dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
